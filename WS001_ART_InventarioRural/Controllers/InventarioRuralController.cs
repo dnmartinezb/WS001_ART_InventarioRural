@@ -23,7 +23,7 @@ namespace WS001_ART_InventarioRural.Controllers
 
         // GET: api/InventarioRural
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<InventarioRural>>> GetInventarioRural()
+        public Task<ActionResult<IEnumerable<InventarioRural>>> GetInventarioRural()
         {
             return _context
                         .InventarioRural
