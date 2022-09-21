@@ -25,10 +25,10 @@ namespace WS001_ART_InventarioRural.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<InventarioRural>>> GetInventarioRural()
         {
-            return await _context
+            return _context
                         .InventarioRural
                         .FromSqlRaw("exec WS001_ART_InventarioRural_ObtenerDetalleInventario_sp")
-                        .ToListAsync();
+                        .ToList();
         }
     }
 }
