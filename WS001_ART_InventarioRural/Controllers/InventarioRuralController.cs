@@ -27,7 +27,7 @@ namespace WS001_ART_InventarioRural.Controllers
         {
             return await _context
                         .InventarioRural
-                        .FromSqlRaw("exec WS001_ART_InventarioRural_ObtenerDetalleInventario")
+                        .FromSqlRaw("exec WS001_ART_InventarioRural_ObtenerDetalleInventario_sp")
                         .ToListAsync();
         }
     }
