@@ -1,10 +1,13 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace WS001_ART_InventarioRural.Models
 {
     public class InventarioRural
     {
         [Key]
+        [JsonIgnore]
         public int Id { get; set; }
 
         public string? CodVereda { get; set; }
